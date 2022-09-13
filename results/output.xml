@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on linux)" generated="20220907 12:14:26.953" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/home/dmd-pc-testeur/VSCode Projects/RobotAIRB/tests">
+<suite id="s1-s1" name="Main" source="/home/dmd-pc-testeur/VSCode Projects/RobotAIRB/tests/main.robot">
+<kw name="Begin Web Test" library="common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220907 12:14:27.034" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220907 12:14:27.034" endtime="20220907 12:14:27.897"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220907 12:14:27.897" endtime="20220907 12:14:28.000"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:27.034" endtime="20220907 12:14:28.000"/>
+</kw>
+<test id="s1-s1-t1" name="Voir les locations disponibles" line="10">
+<kw name="Charger la page" library="PageAccueil">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GOOGLE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220907 12:14:28.001" level="INFO">Opening url 'https://www.google.com/'</msg>
+<status status="PASS" starttime="20220907 12:14:28.001" endtime="20220907 12:14:29.480"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220907 12:14:29.480" endtime="20220907 12:14:29.489"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:28.001" endtime="20220907 12:14:29.489"/>
+</kw>
+<kw name="Rechercher un site de logement" library="PageAccueil">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220907 12:14:29.489" endtime="20220907 12:14:29.510"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>airbnb</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220907 12:14:29.510" level="INFO">Typing text 'airbnb' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20220907 12:14:29.510" endtime="20220907 12:14:29.539"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/div/img</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220907 12:14:29.539" level="INFO">Simulating Mouse Down on element 'xpath=/html/body/div[1]/div[2]/div/img'.</msg>
+<status status="PASS" starttime="20220907 12:14:29.539" endtime="20220907 12:14:29.807"/>
+</kw>
+<kw name="Mouse Up" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/div/img</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220907 12:14:29.808" level="INFO">Simulating Mouse Up on element 'xpath=/html/body/div[1]/div[2]/div/img'.</msg>
+<status status="PASS" starttime="20220907 12:14:29.808" endtime="20220907 12:14:30.080"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220907 12:14:30.081" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]'.</msg>
+<status status="PASS" starttime="20220907 12:14:30.081" endtime="20220907 12:14:31.901"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Images</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220907 12:14:31.901" endtime="20220907 12:14:31.911"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:29.489" endtime="20220907 12:14:31.911"/>
+</kw>
+<kw name="Naviger vers le site AIRBNB" library="PageAccueil">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220907 12:14:31.911" endtime="20220907 12:14:32.182"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220907 12:14:32.182" level="INFO">Clicking link 'xpath://*[@id="rso"]/div[1]/div/div/div/div/div/div/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20220907 12:14:32.182" endtime="20220907 12:14:33.916"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Design</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220907 12:14:33.916" endtime="20220907 12:14:33.954"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220907 12:14:36.954" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220907 12:14:33.954" endtime="20220907 12:14:36.954"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[5]/div/div/div[1]/div/div/div[3]/section/footer/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220907 12:14:36.955" level="INFO">Clicking button 'xpath=/html/body/div[5]/div/div/div[1]/div/div/div[3]/section/footer/button'.</msg>
+<status status="PASS" starttime="20220907 12:14:36.954" endtime="20220907 12:14:36.994"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:31.911" endtime="20220907 12:14:36.995"/>
+</kw>
+<kw name="Rechercher un logement" library="PageAccueil">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220907 12:14:39.996" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220907 12:14:36.995" endtime="20220907 12:14:39.996"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="categoryScroller"]/div/div/div[1]/div/div/div/div[3]/div/div/div/div/button[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220907 12:14:39.997" level="INFO">Clicking button 'xpath://*[@id="categoryScroller"]/div/div/div[1]/div/div/div/div[3]/div/div/div/div/button[3]'.</msg>
+<status status="PASS" starttime="20220907 12:14:39.996" endtime="20220907 12:14:40.128"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220907 12:14:45.129" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220907 12:14:40.128" endtime="20220907 12:14:45.129"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:36.995" endtime="20220907 12:14:45.129"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:28.000" endtime="20220907 12:14:45.130"/>
+</test>
+<kw name="End Web Test" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220907 12:14:45.133" endtime="20220907 12:14:45.196"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:45.132" endtime="20220907 12:14:45.197"/>
+</kw>
+<status status="PASS" starttime="20220907 12:14:26.962" endtime="20220907 12:14:45.197"/>
+</suite>
+<status status="PASS" starttime="20220907 12:14:26.954" endtime="20220907 12:14:45.197"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Main">Tests.Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
